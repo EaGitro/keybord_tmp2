@@ -24,7 +24,7 @@
         border-radius: 10%;
         border: none;
         width: 6.5%;
-        height: 13%;
+        height: 15%;
         font-family: 'fantasy', 'Yu Gothic', 'Yu Gothic Medium', 'メイリオ', 'MS ゴシック';
         margin: 0.2% 0%; 
         padding: 0px;
@@ -131,6 +131,7 @@ function numkeyPush(txt){
         <textarea id="maintxt"></textarea>
     </div>
     <div id="keybord">
+    <button class="q" id="redo" type="button" onclick="redo()">redo</button>
     <button class="normalB" id="key-ex" type="button" onclick="symkeyPush('!')">!</button>
     <button class="normalB" id="key-wq" type="button" onclick="symkeyPush('&quot')">"</button>
     <button class="normalB" id="key-sharp" type="button" onclick="symkeyPush('#')">#</button>
@@ -139,7 +140,9 @@ function numkeyPush(txt){
     <button class="normalB" id="key-sq" type="button" onclick="symkeyPush('\'')">'</button>
     <button class="normalB" id="key-mk0" type="button" onclick="symkeyPush('(')">(</button>
     <button class="normalB" id="key-mk1" type="button" onclick="symkeyPush(')')">)</button>
+    <button class="q" id="undo" type="button" onclick="undo()">undo</button>
     <br>
+    <button class="q" id="tab" type="button" onclick="symkeyPush('\t')">tab</button>
     <button class="normalB" id="key--" type="button" onclick="symkeyPush('-')">-</button>
     <button class="normalB" id="key-eq" type="button" onclick="symkeyPush('=')">=</button>
     <button class="normalB" id="key-caret" type="button" onclick="symkeyPush('^')">^</button>
@@ -149,9 +152,9 @@ function numkeyPush(txt){
     <button class="normalB" id="key--" type="button" onclick="symkeyPush('-')">-</button>
     <button class="normalB" id="key-lt" type="button" onclick="symkeyPush('&lt')">&lt</button>
     <button class="normalB" id="key-gt" type="button" onclick="symkeyPush('&gt')">&gt</button>
-
+    <button class="q" id="key-X" type="button" onclick="backspace()">⇐</button>
     <br>
-    <button class="q" id="redo" type="button" onclick="redo()">redo</button>
+    
     <button class="normalB" id="key-1" type="button" onclick="numkeyPush(1)">1</button>
     <button class="normalB" id="key-2" type="button" onclick="numkeyPush(2)">2</button>
     <button class="normalB" id="key-3" type="button" onclick="numkeyPush(3)">3</button>
@@ -162,9 +165,9 @@ function numkeyPush(txt){
     <button class="normalB" id="key-8" type="button" onclick="numkeyPush(8)">8</button>
     <button class="normalB" id="key-9" type="button" onclick="numkeyPush(9)">9</button>
     <button class="normalB" id="key-0" type="button" onclick="numkeyPush(0)">0</button>
-    <button class="q" id="undo" type="button" onclick="undo()">undo</button>
+    
     <br>
-    <button class="q" id="tab" type="button" onclick="symkeyPush('\t')">tab</button>
+    
     <button class="normalB" id="key-q" type="button" onclick="normkeyPush('q')">q</button>
     <button class="normalB" id="key-w" type="button" onclick="normkeyPush('w')">w</button>
     <button class="normalB" id="key-e" type="button" onclick="normkeyPush('e')">e</button>
@@ -175,7 +178,7 @@ function numkeyPush(txt){
     <button class="normalB" id="key-i" type="button" onclick="normkeyPush('i')">i</button>
     <button class="normalB" id="key-o" type="button" onclick="normkeyPush('o')">o</button>
     <button class="normalB" id="key-p" type="button" onclick="normkeyPush('p')">p</button>
-    <button class="q" id="key-X" type="button" onclick="backspace()">⇐</button>
+    
     <br>
     <button class="q" id="shift" type="button" onclick="shift()">shift</button>
     <button class="normalB" id="key-a" type="button" onclick="normkeyPush('a')">a</button>
