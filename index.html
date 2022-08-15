@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Anton rel="stylesheet"> -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        text-align: center;
+    }
+
+    .normalB {
+        font-size: 100%;
+        font-weight: bold;
+        color: #E0FFFF;
+        background-color: #2f484d;
+        border-radius: 10%;
+        border: none;
+        width: 6.5%;
+        height: 13%;
+        font-family: 'fantasy', 'Yu Gothic', 'Yu Gothic Medium', 'メイリオ', 'MS ゴシック';
+        margin: 0.2% 0%; 
+        padding: 0px;
+    }
+    /* .normalB1 {
+        font-size: 100%;
+        font-weight: bold;
+        color: #E0FFFF;
+        background-color: #2f484d;
+        border-radius: 10%;
+        border: none;
+        width: 6.1%;
+        height: 15.5%;
+        font-family: 'fantasy', 'Yu Gothic', 'Yu Gothic Medium', 'メイリオ', 'MS ゴシック';
+        margin: 0.2% 0%; 
+        padding: 0px;
+    } */
+
+    .q {
+        font-size: 100%;
+        font-weight: bold;
+        color: #E0FFFF;
+        background-color: #2f484d;
+        border-radius: 10%;
+        border: none;
+        width: 10%;
+        height: 13%;
+        font-family: 'fantasy', 'Yu Gothic', 'Yu Gothic Medium', 'メイリオ', 'MS ゴシック';
+        margin: 0.2% 0%;
+        padding: 0px;
+    }
+
+    .qsp {
+        font-size: 100%;
+        font-weight: bold;
+        color: #E0FFFF;
+        background-color: #2f484d;
+        border-radius: 8%;
+        border: none;
+        width: 20%;
+        height: 13%;
+        font-family: 'fantasy', 'Yu Gothic', 'Yu Gothic Medium', 'メイリオ', 'MS ゴシック';
+        margin: 0.2% 0%;
+        padding: 0px;
+    }
+    #keybord{
+        margin-left: -2%;
+        margin-right: auto;
+        text-align:center;
+        position: fixed;
+        bottom: 10px;
+        height: 35%;
+        width: 100%;
+        background-color: #a2d7dd;
+        padding: 0.5% 0%;
+    }
+    @media screen and (max-height: 400px) {
+        #keybord{
+        margin-left: -2%;
+        margin-right: auto;
+        text-align:center;
+        position: fixed;
+        bottom: 10px;
+        height: 45%;
+        width: 100%;
+        background-color: #a2d7dd;
+        padding: 0.5% 0%;
+    }
+
+    }
+    @media screen and (min-width: 481px) {
+        #keybord{
+        margin-left: auto;
+        margin-right: auto;
+        text-align:center;
+        position: fixed;
+        bottom: 10px;
+        height: 35%;
+        width: 100%;
+        background-color: #a2d7dd;
+        padding: 0.5% 0%;
+    }
+    }
+
+
+</style>
+<script>
+
+function symkeyPush(txt){
+    document.getElementById("maintxt").value+=txt
+}
+function normkeyPush(txt){
+    document.getElementById("maintxt").value+=txt
+}
+function numkeyPush(txt){
+    document.getElementById("maintxt").value+=txt
+}
+
+</script>
+
+
+<body>
+    <div id="main">
+        <textarea id="maintxt"></textarea>
+    </div>
+    <div id="keybord">
+    <button class="normalB" id="key-ex" type="button" onclick="symkeyPush('!')">!</button>
+    <button class="normalB" id="key-wq" type="button" onclick="symkeyPush('&quot')">"</button>
+    <button class="normalB" id="key-sharp" type="button" onclick="symkeyPush('#')">#</button>
+    <button class="normalB" id="key-doller" type="button" onclick="symkeyPush('$')">$</button>
+    <button class="normalB" id="key-per" type="button" onclick="symkeyPush('%')">%</button>
+    <button class="normalB" id="key-sq" type="button" onclick="symkeyPush('\'')">'</button>
+    <button class="normalB" id="key-mk0" type="button" onclick="symkeyPush('(')">(</button>
+    <button class="normalB" id="key-mk1" type="button" onclick="symkeyPush(')')">)</button>
+    <br>
+    <button class="normalB" id="key--" type="button" onclick="symkeyPush('-')">-</button>
+    <button class="normalB" id="key-eq" type="button" onclick="symkeyPush('=')">=</button>
+    <button class="normalB" id="key-caret" type="button" onclick="symkeyPush('^')">^</button>
+    <button class="normalB" id="key-wave" type="button" onclick="symkeyPush('~')">~</button>
+    <button class="normalB" id="key-backslash" type="button" onclick="symkeyPush('\\')">\</button>
+    <button class="normalB" id="key-pipe" type="button" onclick="symkeyPush('|')">|</button>
+    <button class="normalB" id="key--" type="button" onclick="symkeyPush('-')">-</button>
+    <button class="normalB" id="key-lt" type="button" onclick="symkeyPush('&lt')">&lt</button>
+    <button class="normalB" id="key-gt" type="button" onclick="symkeyPush('&gt')">&gt</button>
+
+    <br>
+    <button class="q" id="redo" type="button" onclick="redo()">redo</button>
+    <button class="normalB" id="key-1" type="button" onclick="numkeyPush(1)">1</button>
+    <button class="normalB" id="key-2" type="button" onclick="numkeyPush(2)">2</button>
+    <button class="normalB" id="key-3" type="button" onclick="numkeyPush(3)">3</button>
+    <button class="normalB" id="key-4" type="button" onclick="numkeyPush(4)">4</button>
+    <button class="normalB" id="key-5" type="button" onclick="numkeyPush(5)">5</button>
+    <button class="normalB" id="key-6" type="button" onclick="numkeyPush(6)">6</button>
+    <button class="normalB" id="key-7" type="button" onclick="numkeyPush(7)">7</button>
+    <button class="normalB" id="key-8" type="button" onclick="numkeyPush(8)">8</button>
+    <button class="normalB" id="key-9" type="button" onclick="numkeyPush(9)">9</button>
+    <button class="normalB" id="key-0" type="button" onclick="numkeyPush(0)">0</button>
+    <button class="q" id="undo" type="button" onclick="undo()">undo</button>
+    <br>
+    <button class="q" id="tab" type="button" onclick="symkeyPush('\t')">tab</button>
+    <button class="normalB" id="key-q" type="button" onclick="normkeyPush('q')">q</button>
+    <button class="normalB" id="key-w" type="button" onclick="normkeyPush('w')">w</button>
+    <button class="normalB" id="key-e" type="button" onclick="normkeyPush('e')">e</button>
+    <button class="normalB" id="key-r" type="button" onclick="normkeyPush('r')">r</button>
+    <button class="normalB" id="key-t" type="button" onclick="normkeyPush('t')">t</button>
+    <button class="normalB" id="key-y" type="button" onclick="normkeyPush('y')">y</button>
+    <button class="normalB" id="key-u" type="button" onclick="normkeyPush('u')">u</button>
+    <button class="normalB" id="key-i" type="button" onclick="normkeyPush('i')">i</button>
+    <button class="normalB" id="key-o" type="button" onclick="normkeyPush('o')">o</button>
+    <button class="normalB" id="key-p" type="button" onclick="normkeyPush('p')">p</button>
+    <button class="q" id="key-X" type="button" onclick="backspace()">⇐</button>
+    <br>
+    <button class="q" id="shift" type="button" onclick="shift()">shift</button>
+    <button class="normalB" id="key-a" type="button" onclick="normkeyPush('a')">a</button>
+    <button class="normalB" id="key-s" type="button" onclick="normkeyPush('s')">s</button>
+    <button class="normalB" id="key-d" type="button" onclick="normkeyPush('d')">d</button>
+    <button class="normalB" id="key-f" type="button" onclick="normkeyPush('f')">f</button>
+    <button class="normalB" id="key-g" type="button" onclick="normkeyPush('g')">g</button>
+    <button class="normalB" id="key-h" type="button" onclick="normkeyPush('h')">h</button>
+    <button class="normalB" id="key-j" type="button" onclick="normkeyPush('j')">j</button>
+    <button class="normalB" id="key-k" type="button" onclick="normkeyPush('k')">k</button>
+    <button class="normalB" id="key-l" type="button" onclick="normkeyPush('l')">l</button>
+    <button class="q" id="enter" type="button" onclick="symkeyPush('\n')">enter</button>
+    <br>
+    <button class="normalB" id="key-kk0" type="button" onclick="symkeyPush('[')">[</button>
+    <button class="normalB" id="key-kk1" type="button" onclick="symkeyPush(']')">]</button>
+
+    <button class="normalB" id="key-z" type="button" onclick="normkeyPush('z')">z</button>
+    <button class="normalB" id="key-x" type="button" onclick="normkeyPush('x')">x</button>
+    <button class="normalB" id="key-c" type="button" onclick="normkeyPush('c')">c</button>
+    <button class="normalB" id="key-v" type="button" onclick="normkeyPush('v')">v</button>
+    <button class="normalB" id="key-b" type="button" onclick="normkeyPush('b')">b</button>
+    <button class="normalB" id="key-n" type="button" onclick="normkeyPush('n')">n</button>
+    <button class="normalB" id="key-m" type="button" onclick="normkeyPush('m')">m</button>
+    <button class="normalB" id="key-comma" type="button" onclick="symkeyPush(',')">,</button>
+    <button class="normalB" id="key-period" type="button" onclick="symkeyPush('.')">.</button>
+    <br>
+    <button class="normalB" id="key-at" type="button" onclick="symkeyPush('@')">@</button>
+    <button class="normalB" id="key-plus" type="button" onclick="symkeyPush('+')">+</button>
+    <button class="normalB" id="key-ast" type="button" onclick="symkeyPush('*')">*</button>
+    <button class="normalB" id="key-question" type="button" onclick="symkeyPush('?')">?</button>
+    <button class="normalB" id="key-under" type="button" onclick="symkeyPush('_')">_</button>
+    <button class="qsp" id="space" type="button" onclick="symkeyPush(' ')">space</button>
+    <button class="normalB" id="key-nk0" type="button" onclick="symkeyPush('{')">{</button>
+    <button class="normalB" id="key-nk1" type="button" onclick="symkeyPush('}')">}</button>
+    <button class="normalB" id="key-semi" type="button" onclick="symkeyPush(';')">;</button>
+    <button class="normalB" id="key-colon" type="button" onclick="symkeyPush(':')">:</button>
+    <button class="normalB" id="key-backQ" type="button" onclick="symkeyPush('\`')">`</button>
+    </div>
+</body>
+
+</html>
