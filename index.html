@@ -154,6 +154,12 @@
     } */
 </style>
 <script>
+    document.body.addEventListener("touchstart", function (e) {
+        e.preventDefault();
+    });
+    document.body.addEventListener("touchmove", function (e) {
+        e.preventDefault();
+    });
 
     function symkeyPush(txt) {
         document.getElementById("maintxt").value += txt
@@ -164,7 +170,6 @@
     function numkeyPush(txt) {
         document.getElementById("maintxt").value += txt
     }
-
 </script>
 
 
