@@ -92,7 +92,7 @@
         padding: 0px;
     }
 
-    #headder{
+    #headder {
         height: 10%;
         width: 100%;
     }
@@ -165,21 +165,65 @@
     } */
 </style>
 <script>
-    document.body.addEventListener("touchstart", function (e) {
-        e.preventDefault();
-    });
-    document.body.addEventListener("touchmove", function (e) {
-        e.preventDefault();
-    });
+    // document.body.addEventListener("touchstart", function (e) {
+    //     e.preventDefault();
+    // });
+    // document.body.addEventListener("touchmove", function (e) {
+    //     e.preventDefault();
+    // });
+
+    var flag1 = true
+    var poslog = [null, null]
+
+    window.onload = function () {
+
+        document.getElementById("maintxt").addEventListener("touchend", select)
+        document.getElementById("maintxt").addEventListener("mouseup", select)
+    }
+
+    function select() {
+        console.log(11)
+        flag1 = false;
+    }
+
+    function PushOrdinal(txt) {
+        console.log("start")
+        console.log(flag1)
+        var target = document.getElementById("maintxt");
+        var sentence = target.value;
+        var posStart = target.selectionStart;
+        console.log(posStart)
+        var posEnd = target.selectionEnd;
+        console.log(posEnd)
+        if (flag1 && (posStart == 0 || posEnd == 0)) {
+            console.log(12345,poslog)
+            posStart = poslog[0]
+            posEnd = poslog[1]
+        }
+        var before = sentence.substr(0, posStart);
+        var insert = txt;
+
+        var after = sentence.substr(posEnd);
+
+        sentence = before + insert + after;
+        target.value = sentence;
+
+        poslog[0] = posStart
+        poslog[1] = posEnd
+
+        console.log(poslog)
+        flag1 = true
+    }
+
 
     function symkeyPush(txt) {
-        document.getElementById("maintxt").value += txt
+        PushOrdinal(txt)
     }
     function normkeyPush(txt) {
-        document.getElementById("maintxt").value += txt
+        PushOrdinal(txt)
     }
     function numkeyPush(txt) {
-        document.getElementById("maintxt").value += txt
+        PushOrdinal(txt)
     }
 
 </script>
@@ -188,7 +232,7 @@
 <body>
     <div id="headder">
 
-        
+
     </div>
     <div id="txt">
         <textarea id="maintxt" inputmode="none"></textarea>
